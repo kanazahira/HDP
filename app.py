@@ -215,7 +215,7 @@ st.markdown("""
   <p class="hero-sub">Explainable Machine Learning · LightGBM + SMOTE · SHAP Analysis</p>
   <span class="hero-badge">🏥 Academic Project</span>
   <span class="hero-badge">📊 Final Project ML</span>
-  <span class="hero-badge">🔬 Explainable AI</span>
+  <span class="hero-badge">🩺 Healthcare Analytics</span>
 </div>
 """, unsafe_allow_html=True)
 
