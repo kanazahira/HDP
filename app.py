@@ -606,7 +606,7 @@ with tab4:
                       text-transform:uppercase;margin-bottom:6px;">Model Terbaik</div>
           <div style="font-size:24px;font-weight:700;color:#1a2f6e;">⭐ LightGBM + SMOTE</div>
           <div style="font-size:12.5px;color:#1e40af;margin-top:4px;">
-            PR-AUC: 0.9421 &nbsp;·&nbsp; ROC-AUC: 0.9512 &nbsp;·&nbsp; Accuracy: 88.6%
+            PR-AUC: 0.9649 &nbsp;·&nbsp; ROC-AUC: 0.9593 &nbsp;·&nbsp; Accuracy: 90.76%
           </div>
         </div>
         """, unsafe_allow_html=True)
