@@ -364,7 +364,7 @@ with tab2:
 
     styled = (df_res.style
         .apply(highlight_best, axis=1)
-        .format({k:"{:.4f}" for k in ["PR-AUC","ROC-AUC","Accuracy","F1-Score","Precision","Recall"]})
+        .format({k:"{:.4f}" for k in ["PR-AUC","ROC-AUC","F1-Score","Precision","Recall"]})
         .bar(subset=["PR-AUC"], color=["#fee2e2","#dbeafe"])
     )
     st.dataframe(styled, use_container_width=True, hide_index=True, height=260)
