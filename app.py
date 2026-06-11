@@ -422,9 +422,9 @@ with tab2:
     st.markdown('<div class="sec-header">Kenapa PR-AUC Sebagai Metrik Utama?</div>', unsafe_allow_html=True)
     ex1, ex2, ex3 = st.columns(3, gap="medium")
     for col, title, body, color, bg in [
-        (ex1,"⚠️  Accuracy","Persentase prediksi yang benar secara keseluruhan.","#b45309","#fffbeb"),
-        (ex2,"⚠️  ROC-AUC","Kemampuan model membedakan pasien sakit dan sehat.","#b45309","#fffbeb"),
-        (ex3,"✅  PR-AUC","Kemampuan menemukan pasien berisiko dengan tetap meminimalkan false alarm.","#15803d","#f0fdf4"),
+        (ex1,"⚠️  Accuracy","Mengukur persentase prediksi yang benar secara keseluruhan, tetapi belum menunjukkan kemampuan model dalam menemukan pasien yang berisiko penyakit jantung.","#b45309","#fffbeb"),
+        (ex2,"⚠️  ROC-AUC","Mengukur kemampuan model membedakan pasien sakit dan sehat, namun belum secara langsung menggambarkan keseimbangan antara deteksi kasus positif dan false alarm.","#b45309","#fffbeb"),
+        (ex3,"✅  PR-AUC","Berfokus pada Precision dan Recall, sehingga lebih mencerminkan kemampuan model menemukan pasien berisiko penyakit jantung sekaligus mengurangi false alarm.","#15803d","#f0fdf4"),
     ]:
         col.markdown(f"""
         <div style="background:{bg};border-radius:12px;padding:16px 18px;
