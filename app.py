@@ -215,7 +215,7 @@ st.markdown("""
   <p class="hero-sub">Explainable Machine Learning · LightGBM + SMOTE · SHAP Analysis</p>
   <span class="hero-badge">🏥 Academic Project</span>
   <span class="hero-badge">📊 Final Project ML</span>
-  <span class="hero-badge">🩺 Healthcare Analytics</span>
+  <span class="hero-badge">🔬 Explainable AI</span>
 </div>
 """, unsafe_allow_html=True)
 
@@ -349,11 +349,13 @@ with tab2:
             "Logistic Regression + class_weight",
             "Logistic Regression + SMOTE",
         ],
-        "PR-AUC":    [0.9626, 0.9583, 0.9615, 0.9544, 0.9442, 0.9343],
-        "ROC-AUC":   [0.9586, 0.9533, 0.9555, 0.9527, 0.9342, 0.9340],
-        "F1-Score":  [0.9100, 0.9163, 0.9109, 0.8784, 0.8856, 0.8788],
-        "Precision": [0.9286, 0.9208, 0.9200, 0.9400, 0.8890, 0.9062],
-        "Recall":    [0.8922, 0.9118, 0.9020, 0.9216, 0.8725, 0.8529],
+          "PR-AUC":    [0.9649, 0.9613, 0.9591, 0.9579, 0.9442, 0.9434],
+          "ROC-AUC":   [0.9593, 0.9556, 0.9554, 0.9524, 0.9342, 0.9340],
+          "Accuracy":  [0.9076, 0.9130, 0.9076, 0.9130, 0.8750, 0.8696],
+          "F1-Score":        [0.9163, 0.9216, 0.9163, 0.9208, 0.8856, 0.8788],
+          "Precision": [0.9208, 0.9216, 0.9208, 0.9300, 0.8990, 0.9062],
+          "Recall":    [0.9118, 0.9216, 0.9118, 0.9118, 0.8725, 0.8529]
+    }
     }
     df_res = pd.DataFrame(results_data)
 
@@ -364,7 +366,7 @@ with tab2:
 
     styled = (df_res.style
         .apply(highlight_best, axis=1)
-        .format({k:"{:.4f}" for k in ["PR-AUC","ROC-AUC","F1-Score","Precision","Recall"]})
+        .format({k:"{:.4f}" for k in ["PR-AUC","ROC-AUC","Accuracy","F1-Score","Precision","Recall"]})
         .bar(subset=["PR-AUC"], color=["#fee2e2","#dbeafe"])
     )
     st.dataframe(styled, use_container_width=True, hide_index=True, height=260)
